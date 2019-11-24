@@ -1,0 +1,52 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="indent_entries">
+        <item>2个单位</item>
+        <item>4个单位</item>
+    </string-array>
+
+    <string-array name="indent_values">
+        <item>2</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="jdk_entries">
+        <item>1.3</item>
+        <item>1.4</item>
+        <item>1.5</item>
+        <item>1.6</item>
+        <item>1.7</item>
+        <item>1.8</item>
+    </string-array>
+
+    <string-array name="jdk_values">
+        <item>1.3</item>
+        <item>1.4</item>
+        <item>1.5</item>
+        <item>1.6</item>
+        <item>1.7</item>
+        <item>1.8</item>
+    </string-array>
+
+    <string-array name="compile_encoding_entries">
+        <item>UTF-8</item>
+        <item>GBK</item>
+    </string-array>
+
+    <string-array name="compile_encoding_values">
+        <item>UTF-8</item>
+        <item>GBK</item>
+    </string-array>
+
+    <string-array name="maven_entries">
+        <item>Jcenter 源</item>
+        <item>Aliyun 源</item>
+        <item>Central 源</item>
+    </string-array>
+
+    <string-array name="maven_values">
+        <item>https://jcenter.bintray.com</item>
+        <item>https://maven.aliyun.com/repository/central</item>
+        <item>https://repo1.maven.org/maven2</item>
+    </string-array>
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+        android:icon="@drawable/ic_info"
+        android:summary="QQ：1223414335"
+        android:title="联系开发者">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="http://qm.qq.com/cgi-bin/qm/qr?k=KUnqv6xI3HOmKrgmxQNR5QSNpOAHRwaX" />
+    </Preference>
+    <Preference
+        android:icon="@drawable/ic_info"
+        android:summary="QQ：617082514"
+        android:title="推荐群：微技术">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="http://qm.qq.com/cgi-bin/qm/qr?k=dezJxL7E5dTPk0-q5Is6tKA8mPHgIfxy" />
+    </Preference>
+    <Preference
+        android:icon="@drawable/ic_info"
+        android:key="donate"
+        android:summary="不需要太多, 只要些许鼓励^_^"
+        android:title="捐赠" />
+</PreferenceScreen>

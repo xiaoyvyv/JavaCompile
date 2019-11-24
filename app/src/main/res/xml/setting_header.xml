@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Preference
+        android:fragment="com.xiaoyv.java.ui.activity.SettingsActivity$SettingEditorFragment"
+        android:icon="@drawable/ic_editor"
+        android:key="setting_editor"
+        android:summary="行号、颜色、主题等等"
+        android:title="@string/setting_editor" />
+
+    <Preference
+        android:fragment="com.xiaoyv.java.ui.activity.SettingsActivity$SettingCompileFragment"
+        android:icon="@drawable/ic_console"
+        android:key="setting_compile"
+        android:summary="Java 编译选项、参数、路径、版本等等"
+        android:title="@string/setting_compile" />
+
+    <Preference
+        android:icon="@drawable/ic_restore"
+        android:key="setting_restore"
+        android:summary="恢复默认参数"
+        android:title="@string/setting_default" />
+
+    <Preference
+        android:fragment="com.xiaoyv.java.ui.activity.SettingsActivity$SettingAboutFragment"
+        android:icon="@drawable/ic_info"
+        android:key="setting_restore"
+        android:summary="作者和软件相关信息"
+        android:title="@string/setting_about" />
+</PreferenceScreen>

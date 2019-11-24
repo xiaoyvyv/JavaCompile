@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingStart="24dp"
+    android:paddingTop="15dp"
+    android:paddingEnd="24dp">
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/dependencyName"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:gravity="top"
+        android:minLines="5"
+        android:singleLine="false"
+        android:textSize="15sp" />
+
+</LinearLayout>

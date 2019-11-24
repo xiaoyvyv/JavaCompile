@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path
+        name="A_Tool"
+        path="." />
+    <external-path
+        name="files_root"
+        path="mimoDownload" />
+    <external-path
+        name="external_storage_root"
+        path="." />
+    <external-path
+        name="IFly_AD_Download_Path"
+        path="IFlyAdDownload" />
+</paths>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/main_project"
+        android:icon="@drawable/ic_project"
+        android:title="@string/main_project" />
+
+    <item
+        android:id="@+id/main_editor"
+        android:icon="@drawable/ic_editor"
+        android:title="@string/main_editor" />
+
+
+    <item
+        android:id="@+id/main_document"
+        android:icon="@drawable/ic_document"
+        android:title="@string/main_document" />
+
+</menu>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:anim/accelerate_interpolator">
+    <translate
+        android:fromYDelta="0%p"
+        android:toYDelta="50%p"
+        android:duration="500" />
+</set>
+
+    <!--
+    android:fromYDelta 动画开始的位置
+    android:toYDelta   动画结束的位置
+    android:duration   动画的时间
+    -->

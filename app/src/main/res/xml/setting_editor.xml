@@ -1,0 +1,44 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:icon="@drawable/ic_editor"
+        android:key="editor_row"
+        android:summaryOff="隐藏行号"
+        android:summaryOn="显示行号"
+        android:title="编辑器行号" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:icon="@drawable/ic_editor"
+        android:key="editor_auto_compete"
+        android:summaryOff="关闭"
+        android:summaryOn="打开"
+        android:title="代码提示" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:icon="@drawable/ic_editor"
+        android:key="editor_dark_mode"
+        android:summaryOff="关闭"
+        android:summaryOn="打开"
+        android:title="黑暗模式" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:icon="@drawable/ic_editor"
+        android:key="editor_auto_save"
+        android:summaryOff="关闭"
+        android:summaryOn="打开"
+        android:title="退出时自动保存" />
+
+    <ListPreference
+        android:defaultValue="2"
+        android:dialogTitle="代码缩进单位"
+        android:entries="@array/indent_entries"
+        android:entryValues="@array/indent_values"
+        android:icon="@drawable/ic_editor"
+        android:key="formatter"
+        android:summary="设置代码缩进单位(2 or 4)"
+        android:title="代码缩进单位" />
+
+</PreferenceScreen>

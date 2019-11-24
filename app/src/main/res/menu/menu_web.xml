@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/refresh"
+        android:icon="@drawable/ic_refresh"
+        android:orderInCategory="100"
+        android:title="@string/refresh"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/share"
+        android:orderInCategory="100"
+        android:title="@string/share"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/copy"
+        android:orderInCategory="100"
+        android:title="@string/copy_link"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/open"
+        android:orderInCategory="100"
+        android:title="@string/open_web"
+        app:showAsAction="never" />
+</menu>

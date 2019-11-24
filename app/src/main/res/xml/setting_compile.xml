@@ -1,0 +1,68 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:defaultValue="args"
+        android:dialogTitle="设置 main() 方法参数"
+        android:icon="@drawable/ic_console"
+        android:key="run_args"
+        android:summary="设置启动 main() 的参数，请以空格分隔"
+        android:title="main() 启动参数" />
+
+    <EditTextPreference
+        android:defaultValue="/data/data/com.xiaoyv.java/files/lib/rt.jar"
+        android:dialogTitle="CLASSPATH"
+        android:icon="@drawable/ic_console"
+        android:key="rt_path"
+        android:summary="设置jre路径（rt.jar），请确保自定义设置的路径正确，否则会加载默认路径"
+        android:title="CLASSPATH" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:icon="@drawable/ic_console"
+        android:key="compile_auto_run"
+        android:summaryOff="关闭"
+        android:summaryOn="打开"
+        android:title="自动关闭日志并运行" />
+
+    <ListPreference
+        android:defaultValue="UTF-8"
+        android:dialogTitle="编译编码"
+        android:entries="@array/compile_encoding_entries"
+        android:entryValues="@array/compile_encoding_values"
+        android:icon="@drawable/ic_console"
+        android:key="compile_encoding"
+        android:summary="设置编译编码(utf-8 or gbk)"
+        android:title="编译编码" />
+
+
+    <ListPreference
+        android:defaultValue="1.6"
+        android:dialogTitle="源代码版本"
+        android:entries="@array/jdk_entries"
+        android:entryValues="@array/jdk_values"
+        android:icon="@drawable/ic_console"
+        android:key="compile_source"
+        android:summary="设置源代码版本(1.1 to 1.8)"
+        android:title="源代码版本" />
+
+    <ListPreference
+        android:defaultValue="1.6"
+        android:dialogTitle="编译目标版本"
+        android:entries="@array/jdk_entries"
+        android:entryValues="@array/jdk_values"
+        android:icon="@drawable/ic_console"
+        android:key="compile_target"
+        android:summary="设置目标代码版本(1.1 to 1.8)"
+        android:title="目标代码版本" />
+
+    <ListPreference
+        android:defaultValue="https://jcenter.bintray.com"
+        android:dialogTitle="Maven 仓库下载地址"
+        android:entries="@array/maven_entries"
+        android:entryValues="@array/maven_values"
+        android:icon="@drawable/ic_console"
+        android:key="maven"
+        android:summary="设置jar文件的拉取仓库地址"
+        android:title="Maven 仓库下载地址" />
+
+</PreferenceScreen>

@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">Java编译器</string>
+    <string name="open_error">打开失败</string>
+    <string name="save_success">保存成功</string>
+    <string name="save_error">保存失败</string>
+    <string name="splash_text">Hello World!\nI am Java!</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="main_editor">编辑器</string>
+    <string name="main_tool">工具箱</string>
+    <string name="main_project">项目树</string>
+    <string name="main_document">文档库</string>
+    <string name="double_exit">再按一次返回键退出</string>
+    <string name="refresh">刷新</string>
+    <string name="share">分享</string>
+    <string name="open_web">在浏览器中打开</string>
+    <string name="copy_link">复制此链接</string>
+    <string name="collection">收藏</string>
+    <string name="cant_refresh">无法刷新</string>
+    <string name="cant_copy">此链接无法复制</string>
+    <string name="copy_right">复制成功</string>
+    <string name="cant_open">无法打开</string>
+    <string name="open_app">即将打开App</string>
+    <string name="no_open_app">未安装该应用</string>
+    <string name="web_details">网页详情</string>
+    <string name="no_internet">没有网络连接</string>
+    <string name="double_close_web">再按一次返回关闭网页</string>
+    <string name="apply_me_key">fkx01097fafqwfnmxjtzu1c</string>
+    <string name="saving">保存中</string>
+    <string name="tip">提示</string>
+    <string name="done">确定</string>
+    <string name="clear">取消</string>
+    <string name="down_tip">下载提示</string>
+    <string name="download_ing">文件下载中</string>
+    <string name="down_trip">下载提示</string>
+    <string name="download_now">立即下载</string>
+    <string name="file_name">文件名</string>
+    <string name="size">大小</string>
+    <string name="download_dir">下载位置</string>
+    <string name="open_file">打开文件</string>
+    <string name="download_error">下载失败</string>
+    <string name="ad_layout">谢谢支持</string>
+    <string name="title_activity_settings">设置中心</string>
+    <string name="setting_editor">编辑器设置</string>
+    <string name="setting_compile">编译器设置</string>
+    <string name="setting_default">恢复默认设置</string>
+
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="donate">打赏小编ヾ|≧_≦|〃</string>
+    <string name="no_apply_app">你好像没有安装支付宝</string>
+    <string name="setting_about">关于</string>
+    <string name="setting_restore">恢复默认参数</string>
+    <string name="jar_search">Maven 依赖搜索</string>
+    <string name="jar_search_tip">根据关键词查询网络中的依赖库Jar文件\n通过查询到的Maven地址，可以很方便导入到你的项目里并使用</string>
+    <string name="brvah_loading">正在加载中....</string>
+    <string name="brvah_load_failed">加载失败，请点我重试</string>
+    <string name="brvah_load_end">没有更多数据</string>
+    <string name="empty_tip">暂无数据ԅ(¯﹃¯ԅ)</string>
+    <string name="copy_jar">复制依赖地址</string>
+</resources>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.activity.WebActivity">
+
+    <TextView
+        android:padding="15dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        android:text="@string/down_tip"
+        android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black_20" />
+
+    <TextView
+        android:id="@+id/text"
+        android:alpha="0.7"
+        android:padding="15dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black_20" />
+
+    <Button
+        android:clickable="true"
+        android:id="@+id/download"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:text="@string/download_now"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText"
+        android:focusable="true" />
+</LinearLayout>

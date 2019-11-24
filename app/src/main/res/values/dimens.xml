@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="main_title">16sp</dimen>
+    <dimen name="card_elevation">1dp</dimen>
+    <dimen name="dp_40">40dp</dimen>
+</resources>
