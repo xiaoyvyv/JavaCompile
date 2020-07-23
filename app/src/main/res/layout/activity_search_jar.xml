@@ -6,24 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".ui.activity.SearchJarActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/App.AppBarOverlay">
+    <com.google.android.material.appbar.AppBarLayout style="@style/App.DefaultBarLayout">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|enterAlways"
-            app:popupTheme="@style/App.PopupOverlay"
+            style="@style/App.DefaultToolbar"
             app:title="Maven 依赖搜索" />
 
         <androidx.appcompat.widget.SearchView
             android:id="@+id/searchView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/heightToolbar"
             app:queryHint="请输入依赖关键词" />
 
     </com.google.android.material.appbar.AppBarLayout>

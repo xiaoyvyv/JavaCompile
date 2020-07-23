@@ -7,8 +7,17 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.Uri;
+import android.net.http.SslError;
 import android.util.AttributeSet;
 import android.view.View;
+import android.webkit.SslErrorHandler;
+import android.webkit.ValueCallback;
+import android.webkit.WebChromeClient;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebResourceResponse;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import androidx.appcompat.widget.Toolbar;
 
@@ -18,16 +27,6 @@ import com.blankj.utilcode.util.NetworkUtils;
 import com.blankj.utilcode.util.PathUtils;
 import com.blankj.utilcode.util.StringUtils;
 import com.blankj.utilcode.util.ToastUtils;
-import com.tencent.smtt.export.external.interfaces.SslError;
-import com.tencent.smtt.export.external.interfaces.SslErrorHandler;
-import com.tencent.smtt.export.external.interfaces.WebResourceRequest;
-import com.tencent.smtt.export.external.interfaces.WebResourceResponse;
-import com.tencent.smtt.sdk.ValueCallback;
-import com.tencent.smtt.sdk.WebChromeClient;
-import com.tencent.smtt.sdk.WebSettings;
-import com.tencent.smtt.sdk.WebView;
-import com.tencent.smtt.sdk.WebViewClient;
-import com.xiaoyv.http.callback.OnFileChooser;
 import com.xiaoyv.java.R;
 
 import java.util.HashMap;
@@ -46,7 +45,7 @@ public class X5WebView extends WebView {
     private Toolbar toolbar;
     private WebViewProgressBar progressBar;
     private X5LoadFinishListener x5LoadFinishListener;
-    private OnFileChooser onFileChooser;
+    private OnFileChooseListener onFileChooser;
 
     private AlertDialog dialog;
     private OnProgressChangeListener onProgressChangeListener;
@@ -58,26 +57,20 @@ public class X5WebView extends WebView {
         init();
     }
 
-    public X5WebView(Context context, AttributeSet attributeSet) {
-        super(context, attributeSet);
+    public X5WebView(Context context, AttributeSet attrs) {
+        super(context, attrs);
         this.context = context;
         init();
     }
 
-    public X5WebView(Context context, AttributeSet attributeSet, int i) {
-        super(context, attributeSet, i);
+    public X5WebView(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
         this.context = context;
         init();
     }
 
-    public X5WebView(Context context, AttributeSet attributeSet, int i, boolean b) {
-        super(context, attributeSet, i, b);
-        this.context = context;
-        init();
-    }
-
-    public X5WebView(Context context, AttributeSet attributeSet, int i, Map<String, Object> map, boolean b) {
-        super(context, attributeSet, i, map, b);
+    public X5WebView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+        super(context, attrs, defStyleAttr, defStyleRes);
         this.context = context;
         init();
     }
@@ -88,7 +81,6 @@ public class X5WebView extends WebView {
 
     @SuppressLint("SetJavaScriptEnabled")
     public void init() {
-        this.getView().setClickable(true);
         initWebView();
         initWebViewSettings();
 
@@ -203,11 +195,11 @@ public class X5WebView extends WebView {
         this.onProgressChangeListener = onProgressChangeListener;
     }
 
-    public OnFileChooser getOnFileChooser() {
+    public OnFileChooseListener getOnFileChooser() {
         return onFileChooser;
     }
 
-    public void setOnFileChooser(OnFileChooser onFileChooser) {
+    public void setOnFileChooser(OnFileChooseListener onFileChooser) {
         this.onFileChooser = onFileChooser;
     }
 

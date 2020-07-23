@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Java Studio</string>
+    <string name="editor_import">导包</string>
+    <string name="editor_comment">注释</string>
+</resources>

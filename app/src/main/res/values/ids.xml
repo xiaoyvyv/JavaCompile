@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <item name="toolbar" type="id" />
+    <item name="root_view" type="id" />
+
     <item name="BaseQuickAdapter_viewholder_support" type="id" />
     <item name="BaseQuickAdapter_swiping_support" type="id" />
     <item name="BaseQuickAdapter_dragging_support" type="id" />

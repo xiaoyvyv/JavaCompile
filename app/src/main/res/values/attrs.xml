@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 渐变色起色 -->
+    <attr name="colorPrimaryLight" format="color" />
+    <!-- 标题栏颜色 -->
+    <attr name="colorToolbar" format="color" />
+    <!-- 标题栏文字颜色 -->
+    <attr name="colorToolbarText" format="color" />
+    <!-- 标题栏图标颜色 -->
+    <attr name="colorToolbarIcon" format="color" />
+    <!-- 图标颜色 -->
+    <attr name="colorIcon" format="color" />
+    <!-- 条目图标颜色 -->
+    <attr name="colorIconItem" format="color" />
+    <!-- 按钮颜色 -->
+    <attr name="colorButton" format="color" />
+    <!-- 背景颜色 -->
+    <attr name="colorLayout" format="color" />
+    <!-- CardView 背景颜色 -->
+    <attr name="colorCardLayout" format="color" />
+    <!-- 文本颜色 -->
+    <attr name="colorText" format="color" />
+    <!-- 文本颜色（淡） -->
+    <attr name="colorTextLight" format="color" />
+    <!-- 文本提示颜色 -->
+    <attr name="colorTextHint" format="color" />
+    <!-- 对话框背景颜色 -->
+    <attr name="colorDialogLayout" format="color" />
+    <!-- 分割线颜色 -->
+    <attr name="colorDivider" format="color" />
+
+
+
+    <!-- SweetDialog 3dAnimation-->
+    <declare-styleable name="Rotate3dAnimation">
+        <attr name="rollType" format="enum">
+            <enum name="x" value="0" />
+            <enum name="y" value="1" />
+            <enum name="z" value="2" />
+        </attr>
+        <attr name="fromDeg" format="float" />
+        <attr name="toDeg" format="float" />
+        <attr name="valuePivotX" format="fraction" />
+        <attr name="valuePivotY" format="fraction" />
+    </declare-styleable>
+
+    <declare-styleable name="ProgressWheel">
+        <attr name="matProg_progressIndeterminate" format="boolean" />
+        <attr name="matProg_barColor" format="color" />
+        <attr name="matProg_rimColor" format="color" />
+        <attr name="matProg_rimWidth" format="dimension" />
+        <attr name="matProg_spinSpeed" format="float" />
+        <attr name="matProg_barSpinCycleTime" format="integer" />
+        <attr name="matProg_circleRadius" format="dimension" />
+        <attr name="matProg_fillRadius" format="boolean" />
+        <attr name="matProg_barWidth" format="dimension" />
+        <attr name="matProg_linearProgress" format="boolean" />
+    </declare-styleable>
+
+
+    <!-- LabelView 主题 -->
+    <declare-styleable name="LabelView">
+        <attr name="backgroundColor" format="color"/>
+        <attr name="textTitleColor" format="color"/>
+        <attr name="textContentColor" format="color"/>
+
+        <attr name="textTitle" format="string"/>
+        <attr name="textContent" format="string"/>
+
+        <attr name="textTitleSize" format="dimension"/>
+        <attr name="textContentSize" format="dimension"/>
+
+        <attr name="labelTopPadding" format="dimension"/>
+        <attr name="labelCenterPadding" format="dimension"/>
+        <attr name="labelBottomPadding" format="dimension"/>
+        <attr name="labelTopDistance" format="dimension"/>
+        <attr name="textTitleStyle">
+            <enum name="normal" value="0"/>
+            <enum name="italic" value="1"/>
+            <enum name="bold" value="2"/>
+        </attr>
+        <attr name="textContentStyle">
+            <enum name="normal" value="0"/>
+            <enum name="italic" value="1"/>
+            <enum name="bold" value="2"/>
+        </attr>
+        <attr name="direction">
+            <enum name="leftTop" value="-45"/>
+            <enum name="rightTop" value="45"/>
+        </attr>
+    </declare-styleable>
+
+
+</resources>

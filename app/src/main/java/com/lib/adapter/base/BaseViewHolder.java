@@ -84,7 +84,6 @@ public class BaseViewHolder extends RecyclerView.ViewHolder {
         this.nestViews = new HashSet<>();
         convertView = view;
 
-
     }
 
     private int getClickPosition() {

@@ -1,6 +1,5 @@
 package com.lib.utils;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ComponentName;
@@ -12,11 +11,8 @@ import android.os.Build;
 import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.text.format.Formatter;
-import android.view.LayoutInflater;
-import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.webkit.URLUtil;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -26,19 +22,12 @@ import androidx.core.content.FileProvider;
 
 import com.blankj.utilcode.util.ActivityUtils;
 import com.blankj.utilcode.util.AppUtils;
-import com.blankj.utilcode.util.CleanUtils;
 import com.blankj.utilcode.util.FileUtils;
 import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.ObjectUtils;
-import com.blankj.utilcode.util.SPUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.blankj.utilcode.util.Utils;
-import com.xiaoyv.http.OkHttp;
-import com.xiaoyv.http.OnResultStringListener;
 import com.xiaoyv.java.R;
-import com.xiaoyv.java.bean.UpDateBean;
-import com.xiaoyv.java.ui.activity.WebActivity;
-import com.xiaoyv.java.url.Url;
 
 import java.io.File;
 import java.util.List;
@@ -103,159 +92,9 @@ public class MyUtils {
         context.startActivity(Intent.createChooser(share, "分享到"));
     }
 
-    /**
-     * 跳转网页
-     *
-     * @param url 网页链接
-     */
-    public static void openUrl(Context context, String url) {
-        //浏览器中打开
-        if (url.endsWith("openBrowser")) {
-            openBrowser(context, url);
-            return;
-        }
-
-        //无标题打开
-        if (url.endsWith("noTitle")) {
-            openUrl(context, url, true);
-            return;
-        }
-
-
-        //支付宝二维码捐赠
-        if (url.contains(context.getResources().getString(R.string.apply_me_key)) || url.contains("donateAlipayByPic")) {
-            if (context instanceof Activity)
-                AlipayUtil.donateAlipayByPic(((Activity) context));
-            return;
-        }
-
-        //支付宝捐赠
-        if (url.contains(context.getResources().getString(R.string.apply_me_key)) || url.contains("donateAlipay")) {
-            if (context instanceof Activity)
-                AlipayUtil.donateAlipay(((Activity) context));
-            return;
-        }
-
-
-        //微信二维码捐赠
-        if (url.contains(context.getResources().getString(R.string.apply_me_key)) || url.contains("donateWeiXin")) {
-            if (context instanceof Activity)
-                WeChatUtil.donateWeiXin(((Activity) context));
-            return;
-        }
-
-
-        if (URLUtil.isNetworkUrl(url)) {
-            context.startActivity(new Intent(context, WebActivity.class)
-                    .putExtra("from_url", url));
-            return;
-        }
-
-        startActivity(url);
-    }
-
-    /**
-     * 跳转网页
-     *
-     * @param url 网页链接
-     */
-    public static void openUrl(Context context, String url, boolean isNoTitle) {
-        if (URLUtil.isNetworkUrl(url)) {
-            context.startActivity(new Intent(context, WebActivity.class)
-                    .putExtra("from_url", url)
-                    .putExtra("isNoTitle", isNoTitle));
-        } else {
-            startActivity(url);
-        }
-    }
-
-    public static void openUrlWithReferer(Context context, String url, String referer, boolean isNoTitle) {
-        if (URLUtil.isNetworkUrl(url)) {
-            context.startActivity(new Intent(context, WebActivity.class)
-                    .putExtra("from_url", url)
-                    .putExtra("referer", referer)
-                    .putExtra("isNoTitle", isNoTitle));
-        } else {
-            startActivity(url);
-        }
-    }
-
-
-    public static void startActivity(Class<? extends Activity> activity) {
-        Context context = null;
-        List<Activity> activityList = ActivityUtils.getActivityList();
-
-        if (!ObjectUtils.isEmpty(activityList)) {
-            context = activityList.get(activityList.size() - 1);
-        }
-        if (context == null) {
-            context = Utils.getApp().getApplicationContext();
-        }
-        Intent intent = new Intent(context, activity);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
-    }
-
-
-    public static void startActivity(String cls) {
-        try {
-            Intent intent = new Intent();
-            //前名一个参数是应用程序的包名,后一个是这个应用程序的主Activity名
-            intent.setComponent(new ComponentName(AppUtils.getAppPackageName(), cls));
-            startActivity(intent);
-        } catch (Exception e) {
-            ToastUtils.showShort(R.string.open_error);
-        }
-    }
-
-    public static void startActivity(Intent intent) {
-        Context context = null;
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        List<Activity> activityList = ActivityUtils.getActivityList();
-
-        if (!ObjectUtils.isEmpty(activityList)) {
-            context = activityList.get(activityList.size() - 1);
-        }
-        if (context == null) {
-            context = Utils.getApp().getApplicationContext();
-        }
-        if (context == null) {
-            ActivityUtils.startActivity(intent);
-            return;
-        }
-        context.startActivity(intent);
-    }
-
-    //保存网络文件
+    // 保存网络文件
     public static void saveFile(final Context context, String url, @NonNull String saveDir, String saveFileName) {
-        if (saveFileName.length() > 25) {
-            saveFileName = saveFileName.substring(saveFileName.length() - 20);
-        }
-
-        FileUtils.createOrExistsDir(saveDir);
-        ToastUtils.showShort(R.string.saving);
-
-        final String finalSaveFileName = saveFileName;
-        DownloadUtils.getInstance().download(url, saveDir, saveFileName, new DownloadUtils.OnDownloadListener() {
-            @Override
-            public void onDownloadSuccess() {
-                ToastUtils.showShort(R.string.save_success);
-                if (finalSaveFileName.endsWith(".png") || finalSaveFileName.endsWith(".jpg") || finalSaveFileName.endsWith(".jpeg") || finalSaveFileName.endsWith(".gif")) {
-                    MyUtils.saveImageToGallery(context, saveDir + "/" + finalSaveFileName);
-                }
-            }
-
-            @Override
-            public void onDownloading(int progress) {
-
-            }
-
-            @Override
-            public void onDownloadFailed(String error) {
-                LogUtils.e(error);
-                ToastUtils.showShort(R.string.save_error);
-            }
-        });
+       // TODO 保存网络文件
     }
 
     public static void saveImageToGallery(Context context, String path) {
@@ -373,98 +212,7 @@ public class MyUtils {
 
     //App更新检查
     public static void checkAppVersion(final Context context) {
-        OkHttp.do_Get(Url.App_Update, new OnResultStringListener() {
-            @Override
-            public void onResponse(String response) {
-                UpDateBean upDateBean = GsonUtils.fromJson(response, UpDateBean.class);
-
-                SPUtils.getInstance("app_info").put("update", "已经是最新版本！");
-
-                //当前版本
-                int oldCode = AppUtils.getAppVersionCode();
-                int newAppCode = upDateBean.getCode();
-                String newAppVersion = upDateBean.getVersion();
-                if (newAppCode <= oldCode) {
-                    ToastUtils.showShort("已经是最新版本");
-                    return;
-                }
-                SPUtils.getInstance("app_info").put("update", "发现新版本！");
-                String title = upDateBean.getTitle();
-                String message = upDateBean.getMessage();
-                String rightText = upDateBean.getRightText();
-                String centerText = upDateBean.getCenterText();
-                String leftText = upDateBean.getLeftText();
-                String isForce = upDateBean.getForce();
-                final int minCode = upDateBean.getMinCode();
-                final String minVersion = upDateBean.getMinVersion();
-                final String rightUrl = upDateBean.getApkurl();
-                final String centerUrl = upDateBean.getBackurl();
-                final String leftUrl = upDateBean.getLeftUrl();
-
-
-                //判断最低升级版本
-                if (oldCode < minCode) {
-                    isForce = "true";
-                    message = message + "\n\n注意：版本" + minVersion + "以下需要更新后才能使用";
-                }
-
-                @SuppressLint("InflateParams")
-                View view = LayoutInflater.from(context).inflate(R.layout.view_upadte_dialog, null);
-                final AlertDialog alertDialog = new AlertDialog.Builder(context, R.style.update_dialog)
-                        .setView(view).create();
-                alertDialog.show();
-                alertDialog.setCanceledOnTouchOutside(false);
-                if (isForce.equals("true")) {
-                    alertDialog.setCancelable(false);
-                }
-
-                TextView titleTv = view.findViewById(R.id.title);
-                TextView versionTv = view.findViewById(R.id.version);
-                TextView messageTv = view.findViewById(R.id.message);
-                TextView leftBtn = view.findViewById(R.id.leftBtn);
-                TextView centerBtn = view.findViewById(R.id.centerBtn);
-                TextView rightBtn = view.findViewById(R.id.rightBtn);
-
-                versionTv.setText(newAppVersion);
-                titleTv.setText(title);
-                messageTv.setText(message);
-                leftBtn.setText(leftText);
-                centerBtn.setText(centerText);
-                rightBtn.setText(rightText);
-
-                final String finalIsForce = isForce;
-                leftBtn.setOnClickListener(v -> {
-                    MyUtils.openBrowser(context, leftUrl);
-                    if (!finalIsForce.equals("true")) {
-                        alertDialog.dismiss();
-                    }
-                });
-                centerBtn.setOnClickListener(v -> {
-                    MyUtils.openBrowser(context, centerUrl);
-                    if (!finalIsForce.equals("true")) {
-                        alertDialog.dismiss();
-                    }
-
-                });
-                rightBtn.setOnClickListener(v -> {
-                    MyUtils.openUrl(context, rightUrl);
-
-                    // 更新操作清除数据
-                    CleanUtils.cleanInternalCache();
-                    CleanUtils.cleanInternalDbs();
-                    CleanUtils.cleanExternalCache();
-
-                    if (!finalIsForce.equals("true")) {
-                        alertDialog.dismiss();
-                    }
-                });
-            }
-
-            @Override
-            public void onFailure(String error) {
-                LogUtils.e(error);
-            }
-        });
+        // TODO APP检查更新
     }
 
     public static void setToolbarBackToHome(final AppCompatActivity activity, Toolbar toolbar) {

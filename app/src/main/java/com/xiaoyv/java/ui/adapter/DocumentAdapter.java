@@ -59,7 +59,7 @@ public class DocumentAdapter extends BaseAdapter implements Filterable {
         textView.setPadding(20, 20, 20, 20);
         view.setOnClickListener(v -> {
             String url = docHost + html;
-            MyUtils.openUrl(context, url);
+           // MyUtils.openUrl(context, url);
         });
         return view;
     }

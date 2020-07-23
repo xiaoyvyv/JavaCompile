@@ -2,52 +2,77 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:paddingTop="10dp">
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:alpha="0.7"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="@string/project_create_project"
+        android:textColor="?attr/colorText"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
         android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="60dp"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="50dp"
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
-            android:layout_marginStart="20dp"
+            android:alpha="0.6"
             android:gravity="center_vertical"
-            android:text="父目录"
-            android:textSize="16sp" />
+            android:text="@string/project_parent_name"
+            android:textColor="?attr/colorText"
+            android:textSize="14sp" />
 
-        <TextView
-            android:id="@+id/parentName"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/project_parent_name"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:alpha="0.6"
             android:background="@color/transparent"
-            android:gravity="center_vertical" />
+            android:gravity="center_vertical"
+            android:textColor="?attr/colorText"
+            android:textSize="14sp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="60dp"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="50dp"
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
-            android:layout_marginStart="20dp"
+            android:alpha="0.6"
             android:gravity="center_vertical"
-            android:text="包名"
-            android:textSize="16sp" />
+            android:text="@string/project_package_name"
+            android:textColor="?attr/colorText"
+            android:textSize="14sp" />
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/packageName"
-            android:textSize="15sp"
+            android:id="@+id/project_package_name"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginEnd="20dp"
+            android:alpha="0.6"
             android:gravity="center_vertical"
-            android:singleLine="true" />
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:textColor="?attr/colorText"
+            android:textSize="14sp" />
     </LinearLayout>
 </LinearLayout>

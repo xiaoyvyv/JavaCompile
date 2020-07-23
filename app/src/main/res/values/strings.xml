@@ -1,5 +1,47 @@
 <resources>
-    <string name="app_name">Java编译器</string>
+    <string name="app_name">Java Studio</string>
+
+    <string name="splash_tip">一个 Android 端的 Java IDE</string>
+    <string name="splash_interest">兴趣是最好的老师</string>
+    <string name="splash_loading">载入中</string>
+    <string name="splash_copyright">Copyright 2018–2019 by 小玉 .All rights reserved.</string>
+    <string name="splash_skip_time">s 跳过</string>
+
+    <!--  提示信息相关  -->
+    <string name="tips_no_content">暂时没有内容</string>
+    <string name="tips_open">打开</string>
+    <string name="tips_open_app">该网页想要打开外部App</string>
+    <string name="tips_no_internet">没有网络连接</string>
+    <string name="tips_twice_again">再次返回操作退出系统</string>
+    <string name="tips_no_data">暂无数据</string>
+
+    <string name="dialog_loading">加载中，请稍等</string>
+    <string name="dialog_done">确定</string>
+    <string name="dialog_clear">取消</string>
+
+    <string name="project_notice">软件公告：Java 编译器</string>
+    <string name="project_menu_refresh">刷新</string>
+    <string name="project_menu_new">新建</string>
+    <string name="project_menu_import">导入</string>
+    <string name="project_menu_clean">清洁项目</string>
+    <string name="project_un_select">未选择项目</string>
+    <string name="project_no_data">请新建一个项目</string>
+    <string name="project_clean_success">：清理成功</string>
+    <string name="project_name">Java 项目名</string>
+    <string name="project_cant_null">项目名称不能为空</string>
+    <string name="project_is_delete">是否删除该项目：%s？</string>
+    <string name="project_is_delete_item">是否删除该条目？</string>
+    <string name="project_no_open">未打开项目</string>
+    <string name="project_code_file_size">源文件数目：</string>
+    <string name="project_now">工程：</string>
+    <string name="project_cant_open">无法打开该文件</string>
+    <string name="project_parent_name">父目录</string>
+    <string name="project_package_name">包名</string>
+    <string name="project_input_package">请输入包名</string>
+    <string name="project_create_project">新建一个 Java Project</string>
+    <string name="project_create_class">新建一个 Java Class</string>
+
+
     <string name="open_error">打开失败</string>
     <string name="save_success">保存成功</string>
     <string name="save_error">保存失败</string>
@@ -66,4 +108,7 @@
     <string name="brvah_load_end">没有更多数据</string>
     <string name="empty_tip">暂无数据ԅ(¯﹃¯ԅ)</string>
     <string name="copy_jar">复制依赖地址</string>
+    <string name="project_package_class">类名</string>
+    <string name="project_package_kind">类型</string>
+    <string name="editor_log">编译输出日志</string>
 </resources>

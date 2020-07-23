@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context=".ui.activity.WebActivity">
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:padding="15dp"
         android:gravity="center_vertical"
         android:textColor="@color/black"
@@ -22,7 +22,7 @@
         android:layout_height="1dp"
         android:background="@color/black_20" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/text"
         android:alpha="0.7"
         android:padding="15dp"

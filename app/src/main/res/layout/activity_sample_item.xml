@@ -9,17 +9,17 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="Java 示例源码"
-            android:textColor="?colorPrimary"
+            android:textColor="?attr/colorPrimary"
             android:textSize="16sp"
             android:textStyle="bold" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/message"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

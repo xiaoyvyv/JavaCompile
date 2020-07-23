@@ -4,17 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/App.AppBarOverlay">
+    <com.google.android.material.appbar.AppBarLayout style="@style/App.DefaultBarLayout">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/App.PopupOverlay"
+            style="@style/App.DefaultToolbar"
             app:title="文档和帮助" />
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -41,16 +34,16 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:text="JavaApi搜索 (Java SE8 中文文档)"
-                        android:textColor="?colorPrimary"
+                        android:textColor="?attr/colorPrimary"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
-                    <AutoCompleteTextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/keyWordView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -78,16 +71,16 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:text="@string/jar_search"
-                        android:textColor="?colorPrimary"
+                        android:textColor="?attr/colorPrimary"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/jarSearch"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -114,16 +107,16 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:text="Java 示例源码"
-                        android:textColor="?colorPrimary"
+                        android:textColor="?attr/colorPrimary"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/sampleLayout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -155,13 +148,13 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="10dp"
                         android:text="@string/ad_layout"
-                        android:textColor="?colorPrimary"
+                        android:textColor="?attr/colorPrimary"
                         android:textSize="@dimen/main_title"
                         android:textStyle="bold" />
 
@@ -187,16 +180,16 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:text="Java 爬虫教程"
-                        android:textColor="?colorPrimary"
+                        android:textColor="?attr/colorPrimary"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/jsoupLayout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

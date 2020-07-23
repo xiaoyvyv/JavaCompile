@@ -15,14 +15,14 @@
             android:layout_height="130dp"
             android:background="#ffffff" />
 
-        <ImageView
+        <androidx.appcompat.widget.AppCompatImageView
 
             android:layout_width="match_parent"
             android:layout_height="180dp"
             android:src="@mipmap/ic_update"
             android:contentDescription="@string/app_name" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
@@ -32,7 +32,7 @@
             android:textColor="#ffffff"
             android:textSize="18sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/version"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
@@ -55,7 +55,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/message"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -67,7 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp">
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:focusable="true"
                 android:clickable="true"
                 android:id="@+id/leftBtn"
@@ -80,7 +80,7 @@
                 android:gravity="center"
                 android:textColor="@color/black" />
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:focusable="true"
                 android:clickable="true"
                 android:gravity="center"
@@ -96,7 +96,7 @@
                 android:textColor="@color/black"
                 tools:ignore="RelativeOverlap" />
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:focusable="true"
                 android:clickable="true"
                 android:gravity="center"

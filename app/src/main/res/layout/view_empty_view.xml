@@ -4,25 +4,24 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="100dp"
         android:layout_marginBottom="10dp"
         android:contentDescription="@string/app_name"
         android:src="@mipmap/ic_empty_tip" />
 
-    <TextView
-        android:gravity="center"
-        android:layout_marginBottom="100dp"
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tips"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:alpha="0.7"
+        android:layout_marginBottom="100dp"
+        android:alpha="0.6"
+        android:gravity="center"
         android:text="@string/empty_tip"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold" />
+        android:textColor="?attr/colorText"
+        android:textSize="14sp" />
 </LinearLayout>

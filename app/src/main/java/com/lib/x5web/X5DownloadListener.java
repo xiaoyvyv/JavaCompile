@@ -11,6 +11,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.webkit.DownloadListener;
 import android.widget.TextView;
 
 import com.blankj.utilcode.util.EncryptUtils;
@@ -20,9 +21,7 @@ import com.blankj.utilcode.util.PathUtils;
 import com.blankj.utilcode.util.SPUtils;
 import com.blankj.utilcode.util.StringUtils;
 import com.blankj.utilcode.util.ToastUtils;
-import com.lib.utils.DownloadUtils;
 import com.lib.utils.MyUtils;
-import com.tencent.smtt.sdk.DownloadListener;
 import com.xiaoyv.java.R;
 
 import java.net.URLDecoder;
@@ -111,6 +110,8 @@ public class X5DownloadListener implements DownloadListener {
             progressDialog.show();
 
             //第二个是相对参数
+            //TODO 下载
+            /*
             DownloadUtils.getInstance().download(s, savePath, fileName, new DownloadUtils.OnDownloadListener() {
                 @Override
                 public void onDownloadSuccess() {
@@ -137,7 +138,7 @@ public class X5DownloadListener implements DownloadListener {
                     progressDialog.dismiss();
                     ToastUtils.showShort(R.string.download_error);
                 }
-            });
+            });*/
         });
 
 

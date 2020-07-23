@@ -1,8 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <!-- 默认主题 -->
+    <!-- 主色 -->
+    <color name="colorPrimary">#15CBCD</color>
+    <!-- 状态栏颜色 -->
+    <color name="colorPrimaryDark">#15CBCD</color>
+    <!-- 主题渐变起色 -->
+    <color name="colorPrimaryLight">#15CBCD</color>
+    <!-- 强调色 -->
+    <color name="colorAccent">#D81B44</color>
+    <!-- 标题栏背景颜色 -->
+    <color name="colorToolbar">#B9B6E5</color>
+    <!-- 标题栏文字颜色 -->
+    <color name="colorToolbarText">#FFFFFF</color>
+    <!-- 标题栏图标颜色 -->
+    <color name="colorToolbarIcon">#FFFFFF</color>
+    <!-- 背景颜色 -->
+    <color name="colorLayout">#FEFEFE</color>
+    <!-- 默认背景颜色 -->
+    <color name="windowBackground">#FEFEFE</color>
+    <!-- 图标颜色 -->
+    <color name="colorIcon">#BFBFBF</color>
+    <!-- 条目图标颜色 -->
+    <color name="colorIconItem">#A0A0A0</color>
+    <!-- 按钮颜色 -->
+    <color name="colorButton">#7DE2FC</color>
+    <!-- CardView 背景颜色 -->
+    <color name="colorCardLayout">#FFFFFF</color>
+    <!-- 文本颜色 -->
+    <color name="colorText">#03081A</color>
+    <!-- 文本颜色（淡） -->
+    <color name="colorTextLight">#FAFAFA</color>
+    <!-- 文本提示颜色 -->
+    <color name="colorTextHint">#878B99</color>
+    <!-- 对话框背景颜色 -->
+    <color name="colorDialogLayout">#FAFAFA</color>
+    <!-- 分割线颜色 -->
+    <color name="colorDivider">#EEEEEE</color>
+
+    <!-- 黑暗模式主题 -->
+    <!-- 主色 -->
+    <color name="colorPrimaryNight">#212121</color>
+    <!-- 状态栏颜色 -->
+    <color name="colorPrimaryDarkNight">#212121</color>
+    <!-- 主题渐变起色 -->
+    <color name="colorPrimaryLightNight">#212121</color>
+    <!-- 强调色 -->
+    <color name="colorAccentNight">#7E7E7E</color>
+    <!-- 标题栏背景颜色 -->
+    <color name="colorToolbarNight">#212121</color>
+    <!-- 标题栏文字颜色 -->
+    <color name="colorToolbarTextNight">#FFFFFF</color>
+    <!-- 标题栏图标颜色 -->
+    <color name="colorToolbarIconNight">#FFFFFF</color>
+    <!-- 默认背景颜色 -->
+    <color name="windowBackgroundNight">#2E2E2E</color>
+    <!-- 图标颜色 -->
+    <color name="colorIconNight">#B9B6E5</color>
+    <!-- 条目图标颜色 -->
+    <color name="colorIconItemNight">#A0A0A0</color>
+    <!-- 按钮颜色 -->
+    <color name="colorButtonNight">#4E4E4E</color>
+    <!-- 背景颜色 -->
+    <color name="colorLayoutNight">#2E2E2E</color>
+    <!-- CardView 背景颜色 -->
+    <color name="colorCardLayoutNight">#303030</color>
+    <!-- 文本颜色 -->
+    <color name="colorTextNight">#D3D3D3</color>
+    <!-- 文本颜色（淡） -->
+    <color name="colorTextLightNight">#FAFAFA</color>
+    <!-- 文本提示颜色 -->
+    <color name="colorTextHintNight">#D3D3D3</color>
+    <!-- 对话框背景颜色 -->
+    <color name="colorDialogLayoutNight">#303030</color>
+    <!-- 分割线颜色 -->
+    <color name="colorDividerNight">#353535</color>
+
+
+
+
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
     <color name="black_20">#20000000</color>

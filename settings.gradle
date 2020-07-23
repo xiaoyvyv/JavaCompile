@@ -1,4 +1,3 @@
+include ':editor'
 include ':app'
-include ':dx'
-include ':jdk-1_7'
-include ':lib-google-java-format'
+include ':format-java'

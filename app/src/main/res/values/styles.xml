@@ -1,36 +1,169 @@
 <resources>
 
-    <!-- Base application theme. -->
+    <!-- 基础主题 -->
     <style name="App" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <!--页面背景色-->
-        <item name="android:windowBackground">@color/white</item>
-        <!--共享元素动画-->
-        <item name="android:windowContentTransitions">true</item>
     </style>
 
-    <!--默认-->
-    <style name="AppTheme.NoActionBar" parent="App">
+    <!-- 默认主题 -->
+    <style name="App.AppTheme_Light" parent="App">
+        <!-- 主色 -->
         <item name="colorPrimary">@color/colorPrimary</item>
+        <!-- 状态栏颜色 -->
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!-- 主题渐变色起色 -->
+        <item name="colorPrimaryLight">@color/colorPrimaryLight</item>
+        <!-- 强调色 -->
         <item name="colorAccent">@color/colorAccent</item>
+        <!-- 控件选中时的颜色,默认使用 colorAccent -->
+        <item name="android:colorControlActivated">@color/colorAccent</item>
+        <!-- 标题栏颜色 -->
+        <item name="colorToolbar">@color/colorToolbar</item>
+        <!-- 标题栏文字颜色 -->
+        <item name="colorToolbarText">@color/colorToolbarText</item>
+        <!-- 标题栏图标颜色 -->
+        <item name="colorToolbarIcon">@color/colorToolbarIcon</item>
+        <!-- 图标颜色 -->
+        <item name="colorIcon">@color/colorIcon</item>
+        <!-- 条目图标颜色 -->
+        <item name="colorIconItem">@color/colorIconItem</item>
+        <!-- 按钮颜色 -->
+        <item name="colorButton">@color/colorButton</item>
+        <!-- 背景颜色 -->
+        <item name="colorLayout">@color/colorLayout</item>
+        <!-- CardView 背景颜色 -->
+        <item name="colorCardLayout">@color/colorCardLayout</item>
+        <!-- 文本颜色 -->
+        <item name="colorText">@color/colorText</item>
+        <!-- 文本颜色（淡） -->
+        <item name="colorTextLight">@color/colorTextLight</item>
+        <!-- 文本提示颜色 -->
+        <item name="colorTextHint">@color/colorTextHint</item>
+        <!-- 对话框背景颜色 -->
+        <item name="colorDialogLayout">@color/colorDialogLayout</item>
+        <!-- 分割线 -->
+        <item name="colorDivider">@color/colorDivider</item>
+
+        <!-- Android 默认背景色 -->
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <!-- Android 默认文字色 -->
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textColorPrimary">@color/colorText</item>
     </style>
 
+    <!-- 高端黒（黑暗模式）-->
+    <style name="App.AppTheme_Dark" parent="App.AppTheme_Light">
+        <!-- 主色 -->
+        <item name="colorPrimary">@color/colorPrimaryNight</item>
+        <!-- 状态栏颜色 -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkNight</item>
+        <!-- 主题渐变色起色 -->
+        <item name="colorPrimaryLight">@color/colorPrimaryLightNight</item>
+        <!-- 强调色 -->
+        <item name="colorAccent">@color/colorAccentNight</item>
+        <!-- 控件选中时的颜色,默认使用 colorAccent -->
+        <item name="android:colorControlActivated">@color/colorAccentNight</item>
+        <!-- 标题栏颜色 -->
+        <item name="colorToolbar">@color/colorToolbarNight</item>
+        <!-- 标题栏文字颜色 -->
+        <item name="colorToolbarText">@color/colorToolbarTextNight</item>
+        <!-- 标题栏图标颜色 -->
+        <item name="colorToolbarIcon">@color/colorToolbarIconNight</item>
+        <!-- 图标颜色 -->
+        <item name="colorIcon">@color/colorIconNight</item>
+        <!-- 条目图标颜色 -->
+        <item name="colorIconItem">@color/colorIconItemNight</item>
+        <!-- 按钮颜色 -->
+        <item name="colorButton">@color/colorButtonNight</item>
+        <!-- 背景颜色 -->
+        <item name="colorLayout">@color/colorLayoutNight</item>
+        <!-- 背景颜色（淡） -->
+        <item name="colorCardLayout">@color/colorCardLayoutNight</item>
+        <!-- 文本颜色 -->
+        <item name="colorText">@color/colorTextNight</item>
+        <!-- 文本颜色（淡） -->
+        <item name="colorTextLight">@color/colorTextLightNight</item>
+        <!-- 文本提示颜色 -->
+        <item name="colorTextHint">@color/colorTextHintNight</item>
+        <!-- 对话框背景颜色 -->
+        <item name="colorDialogLayout">@color/colorDialogLayoutNight</item>
+        <!-- 分割线 -->
+        <item name="colorDivider">@color/colorDividerNight</item>
 
-    <style name="AppTheme.NoStateBar" parent="App">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:windowTranslucentNavigation">false</item>
-        <!--Android 5.x开始需要把颜色设置透明，否则导航栏会呈现系统默认的浅灰色-->
-        <item name="android:statusBarColor">@android:color/transparent</item>
+        <!-- Android 默认背景色 -->
+        <item name="android:windowBackground">@color/windowBackgroundNight</item>
+        <!-- Android 默认文字色 -->
+        <item name="android:textColor">@color/colorTextNight</item>
+        <item name="android:textColorPrimary">@color/colorTextNight</item>
+
+        <!-- 黑暗对话框 -->
+        <item name="android:alertDialogTheme">@style/App.DialogNight</item>
+        <item name="android:popupMenuStyle">@style/App.DialogNight</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Dark</item>
     </style>
 
-    <style name="App.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <!-- 自定义主题 Dialog Night -->
+    <style name="App.DialogNight" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:windowBackground">?attr/colorDialogLayout</item>
+        <item name="android:popupBackground">?attr/colorDialogLayout</item>
+    </style>
 
-    <style name="App.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <!-- 自定义主题 Toolbar -->
+    <style name="App.DefaultToolbar" parent="App">
+        <item name="android:id">@id/toolbar</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/heightToolbar</item>
+        <item name="android:background">@drawable/bg_toolbar</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="layout_scrollFlags">scroll|enterAlways</item>
+        <item name="titleTextAppearance">@style/App.DefaultToolbarTitle</item>
+        <item name="subtitleTextAppearance">@style/App.DefaultToolbarSubTitle</item>
+    </style>
+
+    <!-- 自定义主题 Toolbar Title-->
+    <style name="App.DefaultToolbarTitle" parent="App">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">?attr/colorToolbarText</item>
+    </style>
+
+    <!-- 自定义主题 Toolbar SubTitle-->
+    <style name="App.DefaultToolbarSubTitle" parent="App">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">?attr/colorToolbarText</item>
+    </style>
+
+    <!-- 自定义主题 BarLayout -->
+    <style name="App.DefaultBarLayout" parent="App">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_toolbar</item>
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="elevation">@dimen/elevation</item>
+    </style>
+
+    <!-- 自定义主题 CollapsingToolbarLayout -->
+    <style name="App.DefaultCollapsingToolbarLayout">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <!-- 自定义主题 TabLayout -->
+    <style name="App.DefaultTabLayout">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- 自定义主题 TabLayout -->
+    <style name="App.DefaultTabLayoutSmall">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!-- 自定义主题 BottomNavigationView -->
+    <style name="App.BottomNavigationViewActive" parent="App">
+        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
 
     <!--页面设置主题-->
     <style name="BottomToBottom" parent="android:Animation">

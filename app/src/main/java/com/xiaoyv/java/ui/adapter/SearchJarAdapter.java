@@ -13,7 +13,6 @@ import com.lib.adapter.base.BaseViewHolder;
 import com.lib.utils.ClipboardUtils;
 import com.xiaoyv.java.R;
 import com.xiaoyv.java.bean.SearchJarBean;
-import com.xiaoyv.java.ui.activity.SearchJarActivity;
 
 public class SearchJarAdapter extends BaseQuickAdapter<SearchJarBean.ResponseBean.DocsBean, BaseViewHolder> implements BaseQuickAdapter.OnItemChildClickListener {
     private final Context context;
@@ -61,7 +60,7 @@ public class SearchJarAdapter extends BaseQuickAdapter<SearchJarBean.ResponseBea
         String a = itemBean.getA();
         String latestVersion = itemBean.getLatestVersion();
         if (view.getId() == R.id.clickView) {
-            SearchJarActivity.start(context, "版本查询：" + id, "g:" + g + "+AND+a:" + a);
+            //SearchJarActivity.start(context, "版本查询：" + id, "g:" + g + "+AND+a:" + a);
         }
         if (view.getId() == R.id.copy) {
             String maven = "<dependency>\n" +

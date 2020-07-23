@@ -4,17 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/App.AppBarOverlay">
+    <com.google.android.material.appbar.AppBarLayout style="@style/App.DefaultBarLayout">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/App.PopupOverlay"
+            style="@style/App.DefaultToolbar"
             app:title="@string/title_activity_settings" />
 
     </com.google.android.material.appbar.AppBarLayout>

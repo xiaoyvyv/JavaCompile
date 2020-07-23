@@ -87,11 +87,11 @@ public class ShareUtils {
             uri = Uri.fromFile(file);
         }
         Intent intent = new Intent(Intent.ACTION_SEND);
-        intent.putExtra("subject", file.getName()); //
-        intent.putExtra("body", file.getName()); // 正文
-        intent.putExtra(Intent.EXTRA_STREAM, uri); // 添加附件，附件为file对象
+        intent.putExtra("subject", file.getName());  //
+        intent.putExtra("body", file.getName());     // 正文
+        intent.putExtra(Intent.EXTRA_STREAM, uri);          // 添加附件，附件为file对象
         intent.setType(MyUtils.getMimeType(file));
-        context.startActivity(intent); // 调用系统的mail客户端进行发送
+        context.startActivity(intent);                      // 调用系统的mail客户端进行发送
     }
 
     /**

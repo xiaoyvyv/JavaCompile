@@ -1,6 +1,7 @@
 package com.lib.x5web;
 
-import com.tencent.smtt.sdk.WebView;
+
+import android.webkit.WebView;
 
 /**
  * Created by Administrator on 2018/4/9.
